@@ -46,25 +46,15 @@ public class RestController {
 		List<Details> details = detailService.getDetailsList();
 		return details.get(0);
 	}
-	
+	/*
+	 * Landing page Controller
+	 */
 	@GetMapping("/welcome")
 	public String welcome(Model model) {
 		List<Details> details = detailService.getDetailsList();
-		//model.put("message", details.get(0));
 		model.addAttribute("message",details.get(0));
 		return "index";
 	}
-	
-	/*@GetMapping("/landing")
-	public ModelAndView landing() {
-	    System.out.println("Inside landing method");
-		List<Details> details = detailService.getDetailsList();
-		ModelAndView mv = new ModelAndView();
-		System.out.println(details.get(0));
-		mv.addObject("obj", details.get(0));
-		mv.setViewName("landing.jsp");
-		return mv;
-	}*/
 
 	@ResponseBody
 	@RequestMapping(value = "/senMail", method = RequestMethod.PUT, headers = "Accept=application/json")

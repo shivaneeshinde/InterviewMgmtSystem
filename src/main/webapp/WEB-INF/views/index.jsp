@@ -29,10 +29,10 @@ function onSelectChange(e){
             contentType: "application/json",
             success: function (data) {
             	console.log('after success data', data);
-            	location.reload();
+            	//location.reload();
             },
 			error: function (data) {
-				location.reload();
+				//location.reload();
 	      }
 	    });
 		
