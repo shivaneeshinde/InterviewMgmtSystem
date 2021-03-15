@@ -24,7 +24,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.interview.management.interviewMgmt.entity.Details;
 import com.interview.management.interviewMgmt.service.DetailService;
 
-//@org.springframework.web.bind.annotation.RestController
 @Controller
 public class RestController {
 	

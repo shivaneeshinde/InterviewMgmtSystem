@@ -7,6 +7,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 
+function lovFunction() {
+	$('select[name="moveForward"]').find('option[value="${message.moveForward}"]').attr("selected",true);
+}
+
 function onSelectChange(e){
 	
 	if(confirm('Are you sure to submit new Data?')){
@@ -36,7 +40,7 @@ function onSelectChange(e){
 	      }
 	    });
 		
-		location.reload();
+		//location.reload();
 	}
 }
 
@@ -86,7 +90,7 @@ hr {
 }  
 </style>  
 </head>  
-<body>  
+<body onload="lovFunction()">  
 <form>  
   <div class="container">  
   <center>  <h1> Interview Management System</h1> </center>  
@@ -102,10 +106,10 @@ hr {
 Move Forward  :  
 </label>   
   
-<select onchange="onSelectChange()" id="moveForward">  
+<select onchange="onSelectChange()" id="moveForward" name="moveForward">  
 <option value="select">--Select--</option>  
 <option value="New">New</option>  
-<option value="First Round" selected>First Round</option>  
+<option value="First Round">First Round</option>  
 <option value="Second Round">Second Round</option>  
 <option value="Managerial Round">Managerial Round</option>  
 <option value="HR Round">HR Round</option>  
